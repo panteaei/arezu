@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "icon One",
+      "image": "/public/images/toDoList/icons8-unicorn-64.png"
+    },
+    {
+      "id": 2,
+      "title": "icon Two",
+      "image": "/public/images/toDoList/icons8-note-64.png"
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وقت برنامه ریزیه...</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body
+    class="flex justify-center items-center h-screen  font-estedad md:backdrop-blur-md bg-[url(/public/images/toDoList/flower.png)] bg-cover bg-center bg-no-repeat"
+  >
+    <!-- svgs  -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="icon-todo" viewBox="0 0 20 22" fill="none">
+        <rect
+          x="0.75"
+          y="4.49469"
+          width="18.5"
+          height="16.7553"
+          rx="2.25"
+          stroke="#1C398E"
+          stroke-width="1.5"
+        />
+        <path
+          d="M5.4054 3.87234C5.4054 2.76777 6.30083 1.87234 7.4054 1.87234H12.5946C13.6992 1.87234 14.5946 2.76778 14.5946 3.87235V4.08511C14.5946 5.18968 13.6992 6.08511 12.5946 6.08511H7.4054C6.30083 6.08511 5.4054 5.18968 5.4054 4.08511V3.87234Z"
+          fill="#1C398E"
+        />
+        <path
+          d="M12.7027 1.87234C12.7027 2.90641 11.5532 3.74468 10.1351 3.74468C8.7171 3.74468 7.56757 2.90641 7.56757 1.87234C7.56757 0.838275 8.7171 0 10.1351 0C11.5532 0 12.7027 0.838275 12.7027 1.87234Z"
+          fill="#1C398E"
+        />
+        <rect
+          x="3.0769"
+          y="9.42856"
+          width="1.53846"
+          height="1.57143"
+          rx="0.769231"
+          fill="#1C398E"
+        />
+        <rect
+          x="6.15387"
+          y="9.42856"
+          width="10.6445"
+          height="1.87234"
+          rx="0.93617"
+          fill="#1C398E"
+        />
+        <rect
+          x="6.15387"
+          y="12.5714"
+          width="10.6445"
+          height="1.87234"
+          rx="0.93617"
+          fill="#1C398E"
+        />
+        <rect
+          x="6.15387"
+          y="15.7143"
+          width="10.6445"
+          height="1.87234"
+          rx="0.93617"
+          fill="#1C398E"
+        />
+        <rect
+          x="3.0769"
+          y="12.5714"
+          width="1.53846"
+          height="1.57143"
+          rx="0.769231"
+          fill="#1C398E"
+        />
+        <rect
+          x="3.0769"
+          y="15.7143"
+          width="1.53846"
+          height="1.57143"
+          rx="0.769231"
+          fill="#1C398E"
+        />
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol
+        id="icon-note"
+        width="21"
+        height="23"
+        viewBox="0 0 21 23"
+        fill="none"
+      >
+        <path
+          d="M3 4.49469H17C18.2426 4.49469 19.25 5.50205 19.25 6.74469V18.9996C19.25 20.2422 18.2426 21.2496 17 21.2496H3C1.75736 21.2496 0.75 20.2422 0.75 18.9996V6.74469C0.750001 5.50205 1.75736 4.49469 3 4.49469Z"
+          stroke="#1C398E"
+          stroke-width="1.5"
+        />
+        <path
+          d="M5.4054 3.87234C5.4054 2.76777 6.30083 1.87234 7.4054 1.87234H12.5946C13.6992 1.87234 14.5946 2.76778 14.5946 3.87235V4.08511C14.5946 5.18968 13.6992 6.08511 12.5946 6.08511H7.4054C6.30083 6.08511 5.4054 5.18968 5.4054 4.08511V3.87234Z"
+          fill="#1C398E"
+        />
+        <path
+          d="M12.7027 1.87234C12.7027 2.90641 11.5532 3.74468 10.1351 3.74468C8.7171 3.74468 7.56757 2.90641 7.56757 1.87234C7.56757 0.838275 8.7171 0 10.1351 0C11.5532 0 12.7027 0.838275 12.7027 1.87234Z"
+          fill="#1C398E"
+        />
+        <rect
+          x="3.0769"
+          y="9.42856"
+          width="13.8462"
+          height="1.57143"
+          rx="0.785714"
+          fill="#1C398E"
+        />
+        <path
+          d="M3.0769 13.3572C3.0769 12.9232 3.42868 12.5714 3.86262 12.5714H16.1373C16.5713 12.5714 16.9231 12.9232 16.9231 13.3572C16.9231 13.7911 16.5713 14.1429 16.1373 14.1429H3.86262C3.42868 14.1429 3.0769 13.7911 3.0769 13.3572Z"
+          fill="#1C398E"
+        />
+        <path
+          d="M6.15387 16.5C6.15387 16.0661 6.50565 15.7143 6.93958 15.7143H13.0605C13.4944 15.7143 13.8462 16.0661 13.8462 16.5C13.8462 16.9339 13.4944 17.2857 13.0605 17.2857H6.93958C6.50565 17.2857 6.15387 16.9339 6.15387 16.5Z"
+          fill="#1C398E"
+        />
+        <path
+          d="M14.3727 16.4473L15.7413 16.6792L14.6913 17.8265L14.3727 16.4473Z"
+          fill="#C0D4FF"
+        />
+        <path
+          d="M15.8124 16.7516L20.503 20.9674C20.8221 21.2541 20.8533 21.7503 20.5729 22.0755V22.0755C20.2925 22.4008 19.8065 22.4321 19.4875 22.1454L14.7969 17.9295L15.8124 16.7516Z"
+          fill="#C0D4FF"
+        />
+      </symbol>
+    </svg>
+    <!-- poker bin icon  -->
+    <svg
+      width="20"
+      height="19"
+      viewBox="0 0 20 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hidden"
+    >
+      <symbol viewBox="0 0 20 19" fill="none" id="icon-bin">
+        <path
+          d="M0.585734 2.98276L3.35497 18.5H15.8165L18.5857 2.98276C11.8955 2.17205 7.9689 2.13655 0.585734 2.98276ZM4.73958 2.36207L5.43189 0.5H13.0473L13.7396 2.36207H4.73958Z"
+          stroke="black"
+        />
+      </symbol>
+    </svg>
+    <!-- edit icon  -->
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hidden"
+    >
+      <symbol viewBox="0 0 21 21" fill="none" id="icon-pencil">
+        <path
+          d="M6.66759 17.9044L2.56332 13.6901M2.56332 13.6901L9.79614 8.1361L15.799 0.75116L19.9033 4.96544L12.3987 10.8269L6.66759 17.9044L1.94721 18.0318L2.56332 13.6901Z"
+          stroke="black"
+        />
+        <path d="M17.4064 6.72752L13.6885 2.88349" stroke="black" />
+        <rect
+          x="3.99131"
+          y="18.2144"
+          width="3.20871"
+          height="0.343974"
+          transform="rotate(-134.044 3.99131 18.2144)"
+          fill="black"
+        />
+      </symbol>
+    </svg>
+    <!-- container of all  -->
+    <div
+      class="relative md:max-w-175 w-full h-169.5 md:bg-[url(/public/images/toDoList/flower.png)] md:bg-cover md:bg-center bg-no-repeat md:border md:border-white/30 rounded-2xl md:shadow-lg py-6 px-10"
+    >
+      <!-- todolist wrapper  -->
+      <div id="todo-wrapper" class="w-full h-full">
+        <!-- heading  -->
+        <div class="w-full text-center mb-5 cursor-default">
+          <h1
+            id="title"
+            class="text-3xl font-semibold text-blue-900 mb-1 transition-all duration-600"
+          >
+            لیست کارها
+          </h1>
+
+          <div class="flex items-center justify-center gap-2">
+            <p id="sub-title" class="transition-all duration-600">
+              برنامه ریزی امروز، موفقیت فردا...
+            </p>
+          </div>
+        </div>
+        <!-- prompt wrapper -->
+        <div
+          tabindex="0"
+          id="prompt-wrapper"
+          class="relative w-full h-14 shadow rounded-xl bg-white/30 transition-all duration-500 focus-within:bg-white"
+        >
+          <input
+            id="list-input"
+            class="w-full inline-block pr-6 pl-20 py-4 placeholder:text-gray-500 placeholder:font-light rounded-xl outline-0 focus:outline-1 focus:outline-blue-600 focus:bg-white transition-colors duration-600"
+            type="text"
+            placeholder="برنامه جدید خود را وارد کنید ..."
+            maxlength="37"
+            autofocus
+          />
+          <div
+            id="prompt-wrapper-Btns"
+            class="absolute flex items-center left-4 top-1/2 -translate-y-1/2 gap-3 transition-all duration-500"
+          >
+            <button
+              id="change-icon-btn"
+              type="button"
+              class="w-10 h-10 rounded-xl cursor-pointer transition-all"
+            >
+              <img
+                src="./public/images/toDoList/icons8-design-50.png"
+                alt="changing the icon"
+              />
+              <div
+                id="change-icon-list"
+                class="invisible pointer-events-none absolute left-0 top-11 bg-[#E0A4D8] w-100 h-50 rounded-xl opacity-0 transition-opacity duration-600"
+              ></div>
+            </button>
+            <button
+              id="list-btn"
+              type="button"
+              class="w-10 h-10 rounded-xl bg-blue-600 text-white text-4xl cursor-pointer hover:bg-blue-300 transition-all duration-300"
+            >
+              +
+            </button>
+          </div>
+          <!-- textarea for note app  -->
+          <textarea
+            name=""
+            id="textarea"
+            rows="3"
+            cols="30"
+            placeholder="متن یادداشت"
+            class="hidden h-23 w-full pr-6 pl-20 py-4 placeholder:text-gray-500 placeholder:font-light outline-0 resize-none border-b border-b-blue-100"
+          ></textarea>
+        </div>
+        <!-- todolist content wrapper -->
+        <div id="todolist-content-wrapper" class="w-full mt-7">
+          <!-- filter for todo wrapper  -->
+          <div
+            class="sm:px-20 px-10 py-2 w-full flex justify-between items-center text-gray-600 *:hover:bg-white/30 *:p-2 *:rounded-xl *:cursor-pointer *:focus:text-blue-600 *:transition-all *:focus:border-b *:focus:border-b-blue-600 *:focus:bg-white/30 *:focus:shadow-2xl bg-white border border-white/30 shadow rounded-xl"
+          >
+            <button type="button">همه</button>
+            <button type="button">فعال</button>
+            <button type="button">تکمیل شده</button>
+          </div>
+          <!-- list wrapper -->
+          <div
+            id="list-wrapper"
+            class="max-h-96 h-full min-h-80 w-full mt-4 overflow-y-scroll *:mb-3 glass-scrollbar"
+          >
+            <!-- each list wrapper data coming from js  -->
+          </div>
+        </div>
+        <!-- note app list content wrapper  -->
+        <div
+          id="notelist-content-wrapper"
+          class="hidden grid-cols-1 gap-y-2 w-full max-h-80 h-full min-h-60 py-6 px-3 rounded-xl mt-3 overflow-y-scroll glass-scrollbar bg-white/90 shadow"
+        >
+          <!-- each note list  -->
+          <!-- 1 -->
+          <div
+            class="relative group rounded-2xl h-32 p-3 bg-pink-100 cursor-pointer hover:outline-2 hover:outline-blue-300 hover:bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]"
+          >
+            <!-- each note list title  -->
+            <div class="flex items-center gap-x-2">
+              <img
+                src="./public/images/toDoList/icons8-design-50.png"
+                alt="cute icon"
+                class="w-6"
+              />
+              <h3
+                class="md:text-xl md:w-auto text-lg xs:w-60 w-30 line-clamp-1"
+              >
+                آموزش برنامه نویسی و اموزش جاوا
+              </h3>
+            </div>
+            <!-- each note list paragraph  -->
+            <p
+              class="line-clamp-2 w-[80%] md:text-lg text-md mt-1.5 md:mt-auto"
+            >
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk kkkkks dsdasd
+              dwdwdwdwadwd
+            </p>
+            <!-- each note list full time  -->
+            <span class="text-xs absolute bottom-3 text-gray-500">
+              پنج شنبه , 20:23
+            </span>
+            <!-- bin and edit  -->
+            <div
+              class="md:invisible md:pointer-events-none absolute md:left-0 left-3 top-3 md:opacity-0 flex items-center gap-x-2 md:group-hover:visible md:group-hover:left-3 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-linear"
+            >
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#7EA36F] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-pencil" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#D36262] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-bin" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- 1 -->
+          <div
+            class="relative group rounded-2xl h-32 p-3 bg-pink-100 cursor-pointer hover:outline-2 hover:outline-blue-300 hover:bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]"
+          >
+            <!-- each note list title  -->
+            <div class="flex items-center gap-x-2">
+              <img
+                src="./public/images/toDoList/icons8-design-50.png"
+                alt="cute icon"
+                class="w-6"
+              />
+              <h3
+                class="md:text-xl md:w-auto text-lg xs:w-60 w-30 line-clamp-1"
+              >
+                آموزش برنامه نویسی و اموزش جاوا
+              </h3>
+            </div>
+            <!-- each note list paragraph  -->
+            <p
+              class="line-clamp-2 w-[80%] md:text-lg text-md mt-1.5 md:mt-auto"
+            >
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk kkkkks dsdasd
+              dwdwdwdwadwd
+            </p>
+            <!-- each note list full time  -->
+            <span class="text-xs absolute bottom-3 text-gray-500">
+              پنج شنبه , 20:23
+            </span>
+            <!-- bin and edit  -->
+            <div
+              class="md:invisible md:pointer-events-none absolute md:left-0 left-3 top-3 md:opacity-0 flex items-center gap-x-2 md:group-hover:visible md:group-hover:left-3 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-linear"
+            >
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#7EA36F] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-pencil" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#D36262] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-bin" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- 1 -->
+          <div
+            class="relative group rounded-2xl h-32 p-3 bg-pink-100 cursor-pointer hover:outline-2 hover:outline-blue-300 hover:bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]"
+          >
+            <!-- each note list title  -->
+            <div class="flex items-center gap-x-2">
+              <img
+                src="./public/images/toDoList/icons8-design-50.png"
+                alt="cute icon"
+                class="w-6"
+              />
+              <h3
+                class="md:text-xl md:w-auto text-lg xs:w-60 w-30 line-clamp-1"
+              >
+                آموزش برنامه نویسی و اموزش جاوا
+              </h3>
+            </div>
+            <!-- each note list paragraph  -->
+            <p
+              class="line-clamp-2 w-[80%] md:text-lg text-md mt-1.5 md:mt-auto"
+            >
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk kkkkks dsdasd
+              dwdwdwdwadwd
+            </p>
+            <!-- each note list full time  -->
+            <span class="text-xs absolute bottom-3 text-gray-500">
+              پنج شنبه , 20:23
+            </span>
+            <!-- bin and edit  -->
+            <div
+              class="md:invisible md:pointer-events-none absolute md:left-0 left-3 top-3 md:opacity-0 flex items-center gap-x-2 md:group-hover:visible md:group-hover:left-3 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-linear"
+            >
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#7EA36F] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-pencil" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#D36262] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-bin" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- 1 -->
+          <div
+            class="relative group rounded-2xl h-32 p-3 bg-pink-100 cursor-pointer hover:outline-2 hover:outline-blue-300 hover:bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]"
+          >
+            <!-- each note list title  -->
+            <div class="flex items-center gap-x-2">
+              <img
+                src="./public/images/toDoList/icons8-design-50.png"
+                alt="cute icon"
+                class="w-6"
+              />
+              <h3
+                class="md:text-xl md:w-auto text-lg xs:w-60 w-30 line-clamp-1"
+              >
+                آموزش برنامه نویسی و اموزش جاوا
+              </h3>
+            </div>
+            <!-- each note list paragraph  -->
+            <p
+              class="line-clamp-2 w-[80%] md:text-lg text-md mt-1.5 md:mt-auto"
+            >
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+              kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk kkkkks dsdasd
+              dwdwdwdwadwd
+            </p>
+            <!-- each note list full time  -->
+            <span class="text-xs absolute bottom-3 text-gray-500">
+              پنج شنبه , 20:23
+            </span>
+            <!-- bin and edit  -->
+            <div
+              class="md:invisible md:pointer-events-none absolute md:left-0 left-3 top-3 md:opacity-0 flex items-center gap-x-2 md:group-hover:visible md:group-hover:left-3 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-linear"
+            >
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#7EA36F] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-pencil" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex justify-center items-center bg-[#D36262] sm:w-8 sm:h-8 w-6 h-6 rounded-md cursor-pointer hover:scale-105 hover:shadow"
+              >
+                <svg class="sm:w-6 sm:h-6 w-4 h-4">
+                  <use xlink:href="#icon-bin" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- extentions wrapper (eye and note) -->
+      <div class="absolute left-12 top-18">
+        <!-- toggle between note and todo list  -->
+        <div
+          id="changeApp"
+          class="flex items-center gap-1 bg-blue-100 rounded-xl px-2.5 py-1 cursor-pointer hover:bg-blue-200 transition-all"
+        >
+          <svg id="extention-app-icon" class="w-4 h-4.5">
+            <use xlink:href="#icon-todo" />
+          </svg>
+          <h2
+            id="extention-app-text"
+            class="text-xs font-semibold text-blue-900"
+          >
+            یادداشت
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/js/toDoList.js"></script>
+    <script src="./src/js/note.js"></script>
+  </body>
+</html>

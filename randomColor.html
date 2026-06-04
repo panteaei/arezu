@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color</title>
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body class=" h-screen flex justify-center items-center bg-gray-200 ">
+    <div class="max-w-88.75 w-full flex flex-col items-center">
+      <!-- heading -->
+      <h1 class="text-3xl font-bold mb-3">Random <span class="bg-conic/decreasing from-violet-700 via-lime-300 to-violet-700 bg-clip-text text-transparent">Color</span> Generator</h1>
+      <!-- show colors and rgb values  -->
+      <div class="bg-white rounded-2xl p-5 mb-3">
+        <div id="color" class="bg-black w-72 h-72 rounded-2xl mb-3 transition-all"></div>
+        <p id="rgb" class="font-bold text-center">
+          RGB(00,00,00)
+        </p>
+      </div>
+      <!-- btns -->
+      <div class="flex justify-center items-center gap-x-2 w-full">
+        <button id="generate" class="bg-green-600 px-3 py-2 text-white rounded-xl cursor-pointer hover:bg-green-800 transition-all" type="button">Generate</button>
+        <button id="copy" class="bg-blue-600 text-white px-3 py-2 rounded-xl cursor-pointer hover:bg-blue-800 transition-all" type="button">Copy</button>
+      </div>
+    </div>
+    <!-- credit  -->
+
+    <script src="./src/js/calculator.js"></script>
+  </body>
+</html>
