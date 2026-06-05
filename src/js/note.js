@@ -7,7 +7,8 @@ const todoTitle = "لیست کارها";
 const noteSubTitle = "کارهای کوچیک، تغییرات بزرگ";
 const todoSubTitle = "برنامه ریزی امروز، موفقیت فردا...";
 let isTodoWrapper = true;
-const extentionAppIcon = document.querySelector("#extention-app-icon");
+const extentionNoteAppIcon = document.querySelector("#extention-noteApp-icon");
+const extentionTodoAppIcon = document.querySelector("#extention-todoApp-icon");
 const extentionAppText = document.querySelector("#extention-app-text");
 const todoListWrapper = document.querySelector("#todolist-content-wrapper");
 const noteListWrapper = document.querySelector("#notelist-content-wrapper");
@@ -48,16 +49,22 @@ function changeCurrentApp() {
       "focus:outline-blue-600",
       "focus:bg-white",
     );
-   
+
     promptWrapper.classList.remove("h-14");
     promptWrapper.classList.add("h-53");
+    extentionTodoAppIcon.classList.remove("hidden");
+    extentionNoteAppIcon.classList.add("hidden");
+    changeApp.classList.remove("bg-blue-100")
+    changeApp.classList.remove("hover:bg-blue-200")
+    changeApp.classList.add("bg-pink-200")
+    changeApp.classList.add("hover:bg-pink-300")
     promptWrapperBtns.classList.remove("top-1/2", "-translate-y-1/2");
     promptWrapperBtns.classList.add("bottom-3");
     textArea.classList.remove("hidden");
-    textArea.focus()
+    textArea.focus();
     noteListWrapper.classList.remove("hidden");
     noteListWrapper.classList.add("grid");
-
+    listBox.classList.add("hidden")
 
     isTodoWrapper = false;
   } else {
@@ -67,14 +74,21 @@ function changeCurrentApp() {
       "focus:outline-blue-600",
       "focus:bg-white",
     );
-   
+
     promptWrapper.classList.add("h-14");
     promptWrapper.classList.remove("h-53");
+    extentionTodoAppIcon.classList.add("hidden");
+    extentionNoteAppIcon.classList.remove("hidden");
+      changeApp.classList.add("bg-blue-100")
+    changeApp.classList.add("hover:bg-blue-200")
+    changeApp.classList.remove("bg-pink-200")
+    changeApp.classList.remove("hover:bg-pink-300")
     promptWrapperBtns.classList.add("top-1/2", "-translate-y-1/2");
     promptWrapperBtns.classList.remove("bottom-3");
     textArea.classList.add("hidden");
     noteListWrapper.classList.remove("grid");
     noteListWrapper.classList.add("hidden");
+    listBox.classList.remove("hidden")
 
     isTodoWrapper = true;
   }
@@ -82,7 +96,7 @@ function changeCurrentApp() {
 }
 changeApp.addEventListener("click", changeCurrentApp);
 
-// create notes 
-document.createElement("div")
-
+// create notes
+document.createElement("div");
+console.log(listBox)
 
