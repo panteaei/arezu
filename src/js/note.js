@@ -1,3 +1,6 @@
+
+let input = document.querySelector("#list-input");
+let listBox = document.querySelector("#list-wrapper");
 const changeApp = document.querySelector("#changeApp");
 const todoWrapper = document.querySelector("#todo-wrapper");
 const mainTitle = document.querySelector("#title");

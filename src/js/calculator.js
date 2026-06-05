@@ -1,3 +1,4 @@
+import '../main.css'
 let generateBtn = document.querySelector("#generate");
 let copyBtn = document.querySelector("#copy");
 let rgbBox = document.querySelector("#rgb");

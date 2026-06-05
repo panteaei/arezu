@@ -16,7 +16,7 @@
 //   Celsius.value = "";
 //   Fahrenheit.value = "";
 // });
-
+import '../main.css'
 let iran = {
   تهران: {
     temp: "23°C",

@@ -1,3 +1,4 @@
+import '../main.css'
 let input = document.querySelector("#list-input");
 let addBtn = document.querySelector("#list-btn");
 
